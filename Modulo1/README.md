@@ -1,1 +1,1 @@
-Entrega de Producción de Hipertexto
+Entrega de Producción de Textos e Hipertextos
