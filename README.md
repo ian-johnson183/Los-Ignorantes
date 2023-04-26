@@ -6,5 +6,6 @@ Integrantes del grupo
 * Julián Hidalgo - <julyanlp12@gmail.com>
 
 <b>Links a entregas</b>
-* <a href="https://github.com/ian-johnson183/Los-Ignorantes/tree/main/Modulo1" target="_BLANK">Modulo 1</a><br>
+* <a href="https://github.com/ian-johnson183/Los-Ignorantes/tree/main/Modulo1" target="_BLANK">Modulo 1 - Producción de Textos e Hipertextos</a><br>
+* <a href="https://github.com/ian-johnson183/Los-Ignorantes/tree/main/Modulo2" target="_BLANK">Modulo 2 - IDE R-Markdown LaTeX</a><br>
 
