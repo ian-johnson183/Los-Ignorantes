@@ -1,1 +1,1 @@
-Entrega de Producción de Textos e Hipertextos
+Entrega de Módulo 1 - Producción de Textos e Hipertextos
