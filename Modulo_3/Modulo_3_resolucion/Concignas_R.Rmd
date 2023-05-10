@@ -1,7 +1,16 @@
 ---
 title: "Elementos de programación R"
-author: "Ricardo R. Palma"
-date: "2023-04-26"
+author: 
+  - name: "Ian Johnson"
+    inst: "1"
+    orcid: "0009-0001-2786-9385"
+  - name: "Carolina Fernández"
+    inst: "1"
+    orcid: "0009--0004-4219-1041"
+  - name: "Julián Hidalgo"
+    inst: "1"
+    orcid: "0009-0002-0617-6800"
+date: "2023-05-10"
 output:
   pdf_document: default
   html_document: default
