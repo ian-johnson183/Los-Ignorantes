@@ -1,0 +1,174 @@
+{UTF-8}
+Cambio neto del empleo=
+	Empleados a contratar/Delay de contratación
+	~	personas/Year
+	~		|
+
+Delay de contratación=
+	0.5
+	~	Year [0,2,0.1]
+	~		|
+
+Empleados a contratar=
+	Producción necesaria para cerrar el gap/Productividad
+	~	personas
+	~		|
+
+Empleo= INTEG (
+	Cambio neto del empleo,
+		Empleo inicial)
+	~	personas
+	~		|
+
+Empleo inicial=
+	200
+	~	personas [0,400,10]
+	~		|
+
+Gap=
+	Inventario deseado-Inventario
+	~	unidades
+	~		|
+
+Inventario= INTEG (
+	Producción menos ventas,
+		Inventario inicial)
+	~	unidades
+	~		|
+
+Inventario deseado=
+	20000
+	~	unidades [0,40000,2000]
+	~		|
+
+Inventario inicial=
+	25000
+	~	unidades [0,50000,1000]
+	~		|
+
+Plazo para cerrar el gap=
+	0.25
+	~	Year
+	~		|
+
+Producción menos ventas=
+	(Empleo*Productividad)-Ventas
+	~	unidades/Year
+	~		|
+
+Producción necesaria para cerrar el gap=
+	Gap/Plazo para cerrar el gap
+	~	unidades/Year
+	~		|
+
+Productividad=
+	100
+	~	unidades/(personas*Year) [50,150,5]
+	~		|
+
+Ventas=
+	20000
+	~	unidades/Year [10000,30000,1000]
+	~		|
+
+********************************************************
+	.Control
+********************************************************~
+		Simulation Control Parameters
+	|
+
+FINAL TIME  = 10
+	~	Year
+	~	The final time for the simulation.
+	|
+
+INITIAL TIME  = 0
+	~	Year
+	~	The initial time for the simulation.
+	|
+
+SAVEPER  = 
+        TIME STEP 
+	~	Year [0,?]
+	~	The frequency with which output is stored.
+	|
+
+TIME STEP  = 0.0625
+	~	Year [0,?]
+	~	The time step for the simulation.
+	|
+
+\\\---/// Sketch information - do not modify anything except names
+V300  Do not put anything below this section - it will be ignored
+*View 1
+$-1--1--1,0,|14||-1--1--1|-1--1--1|-1--1--1|-1--1--1|-1--1--1|96,96,68,0
+10,1,Inventario,309,133,49,22,3,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,2,48,848,134,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,3,5,2,100,0,0,22,0,192,0,-1--1--1,,1|(721,134)|
+1,4,5,1,4,0,0,22,0,192,0,-1--1--1,,1|(475,134)|
+11,5,0,598,134,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,6,Producción menos ventas,598,169,69,27,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,7,Inventario inicial,404,58,49,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,8,Ventas,450,272,42,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,9,Productividad,753,255,68,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,10,Empleo,872,394,42,22,3,3,0,0,-1,0,0,0,0,0,0,0,0,0
+12,11,48,457,395,10,8,0,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,12,14,11,100,0,0,22,0,192,0,-1--1--1,,1|(554,395)|
+1,13,14,10,4,0,0,22,0,192,0,-1--1--1,,1|(742,395)|
+11,14,0,648,395,6,8,34,3,0,0,1,0,0,0,0,0,0,0,0,0
+10,15,Cambio neto del empleo,648,430,64,27,40,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,16,Delay de contratación,900,498,60,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,17,Empleo inicial,910,323,42,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,18,Empleados a contratar,457,473,56,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,19,Producción necesaria para cerrar el gap,498,581,73,39,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,20,Gap,347,698,42,22,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,21,Plazo para cerrar el gap,733,699,62,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+10,22,Inventario deseado,405,807,49,27,8,3,0,0,-1,0,0,0,0,0,0,0,0,0
+1,23,8,6,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,24,9,6,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,25,10,6,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,26,17,10,0,0,0,0,0,192,1,-1--1--1,,1|(0,0)|
+1,27,18,15,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,28,16,15,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+10,29,Productividad,780,600,56,27,8,2,0,3,-1,0,0,0,128-128-128,0-0-0,|||128-128-128,0,0,0,0,0,0
+1,30,29,18,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,31,19,18,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,32,20,19,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,33,21,19,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,34,22,20,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,35,1,20,0,0,0,0,0,192,0,-1--1--1,,1|(0,0)|
+1,36,7,1,0,0,0,0,0,192,1,-1--1--1,,1|(0,0)|
+///---\\\
+:L<%^E!@
+1:current.vdfx
+4:Time
+5:Inventario
+9:current
+19:68,0
+24:0
+25:10
+26:10
+23:0
+15:0,0,0,1,0,0
+27:0,
+34:0,
+42:0
+72:0
+73:0
+95:0
+96:0
+97:0
+77:0
+78:0
+102:1
+93:0
+94:0
+92:0
+91:0
+90:0
+87:0
+75:
+43:
+103:8,8,8,3,8
+105:0,0,0,0,0,0,0,0,0,0
+104:Arial|14||0-0-0|0-0-0|-1--1--1|0-0-255|192-192-192|-1--1--1
