@@ -1,0 +1,85 @@
+---
+classoption: "runningheads"
+title: "Práctica en R-Studio\\thanks{INTA Eugenio Bustos}"
+shorttitle: "Práctica en R-Studio"
+# If the paper title is too long for the 
+# running head, you can set an abbreviated 
+# paper title here.
+# shorttitle: "Abbreviated paper title"
+authors: 
+  - name: "Ian Johnson"
+    inst: "1"
+    orcid: "0009-0001-2786-9385"
+  - name: "Carolina Fernández"
+    inst: "1"
+    orcid: "0009-0004-4219-1041"
+  - name: "Julián Hidalgo"
+    inst: "1"
+    orcid: "0009-0002-0617-6800"
+# First names are abbreviated in the running head.
+# If there are more than two authors, 'et al.' is used.
+authorrunning: "Grupo Los Ignorantes" 
+institutes: 
+   - name: "Grupo Los Ignorantes"
+    # email: "lncs@springer.com"
+    # url: "http://www.springer.com/gp/computer-science/lncs"
+abstract: | 
+  En este documento se agregan imágenes, ecuaciones y tablas usando el R-Markdown.
+keywords: 
+  - Imágenes
+  - Ecuaciones
+  - Tablas
+  - R-Studio
+bibliography: lncs-test.bib
+# Use csl when using default citation_package for Pandoc citeproc
+csl: https://www.zotero.org/styles/springer-lecture-notes-in-computer-science
+# citations with arabic numbers is prefered when using natbib
+natbiboptions: numbers
+
+output: 
+  rticles::lncs_article:
+    citation_package: default # or natbib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      out.extra = "")  # This forces knitr to label all figures.
+```
+
+# Primera sección
+
+## Movimiento Armónico Simple
+
+La ecuación del movimiento armónico simple es:
+
+\begin{equation}
+y = A cos(\omega t + \phi)
+\end{equation}
+
+![Movimiento Armónico Simple](MAS.png){width=300px height=225px}
+
+## Ecuación de Bernoulli
+
+La ecuación de Bernoulli es:
+
+\begin{equation}
+P_1 + \frac{1}{2} \rho (v_1)^2 + \rho g h_1 = P_2 + \frac{1}{2} \rho (v_2)^2 + \rho g h_2 
+\end{equation}
+
+![Bernoulli](BernoullisLawDerivationDiagram.svg.png){width=300px height=150px}
+
+## PBI per cápita de Argentina
+
+La tabla \ref{tab:table} muestra la evolución del PBI per cápita de Argentina durante el período entre 2011 y 2021
+
+```{r table}
+
+datos <- data.frame(
+  "Año" = c(2021,2020,2019,2018,2017,2016,2015,2014,2013,2012,2011),
+  "PBI"= c(10.625,8.574,10.054,11.786,14.618,12.773,14.895,3.209,14.489,13.890,12.788)
+)
+
+knitr::kable(head(datos), 
+             format = "latex",
+             caption = "PBI per cápita de Argentina entre 2011 y 2021")
+```
