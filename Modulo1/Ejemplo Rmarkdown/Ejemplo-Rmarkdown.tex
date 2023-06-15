@@ -1,0 +1,190 @@
+% This is samplepaper.tex, a sample chapter demonstrating the
+% LLNCS macro package for Springer Computer Science proceedings;
+% Version 2.21 of 2022/01/12
+%
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+% T1 fonts will be used to generate the final print and online PDFs,
+% so please use T1 fonts in your manuscript whenever possible.
+% Other font encondings may result in incorrect characters.
+
+
+% tightlist command for lists without linebreak
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+
+
+
+\usepackage{graphicx}
+% Used for displaying a sample figure. If possible, figure files should
+% be included in EPS format.
+%
+% If you use the hyperref package, please uncomment the following two lines
+% to display URLs in blue roman font according to Springer's eBook style:
+\usepackage{hyperref}
+\usepackage{color}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+
+\begin{document}
+
+
+\title{Ejemplo Simple Rmarkdown}
+%
+\titlerunning{Short title}
+% If the paper title is too long for the running head, you can set
+% an abbreviated paper title here
+%
+\author{Carolina
+Fernández\inst{}\orcidID{0009-0004-4219-1041} \and Julián
+Hidalgo\inst{}\orcidID{0009-0002-0617-6800} \and Ian
+Johnson\inst{}\orcidID{0009-0001-2786-9385}}
+
+
+\authorrunning{Microsoft}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+%
+
+\institute{Universidad Nacional de Cuyo, Mendoza, Argentina\\
+\email{\href{mailto:direccion.alumnos@ingenieria.uncuyo.edu.ar}{\nolinkurl{direccion.alumnos@ingenieria.uncuyo.edu.ar}}}\\}
+
+\maketitle              % typeset the header of the contribution
+%
+\begin{abstract}
+Sección del primer módulo de administración en la nube de Microsoft
+
+\keywords{Microsoft \and Azure \and Nube}
+
+\end{abstract}
+
+\hypertarget{muxf3dulo-1}{%
+\section{Módulo 1}\label{muxf3dulo-1}}
+
+\hypertarget{introducciuxf3n-a-la-informuxe1tica-en-la-nube}{%
+\subsection{\texorpdfstring{\emph{Introducción a la informática en la
+nube}}{Introducción a la informática en la nube}}\label{introducciuxf3n-a-la-informuxe1tica-en-la-nube}}
+
+La informática en la nube es la presentación de servicios informáticos a
+través de internet. Estos incluyen infraestructura en TI común (máquinas
+virtuales, almacenamiento, bases de datos y redes) y amplían las ofertas
+de TI tradicionales sumando valores como Internet de las cosas (IoT),
+aprendizaje automático (ML) e inteligencia artificial (IA). Si la
+informática en la nube necesita aumentar rápidamente la infraestructura
+de TI, no tiene que esperar a crear un centro de datos, puede usar la
+nube para expandir rápidamente la superficie de TI. Básicamente, la
+informática en la nube funciona como un medio para ejecutar un software
+eligiendo potencia y características necesarias para el mismo. Este
+equipo se encuentra en un centro de datos de un proveedor de nube (no
+físicamente). Se pagan por los servicios únicamente sin necesidad de
+realizar mantenimiento al equipo (lo realiza otra persona). Las ofertas
+de los proveedores varían entre sí, pero los servicios básicos que todos
+otorgan son la potencia de proceso y almacenamiento. Se definirán a
+continuación para entender de qué se trata:
+
+\begin{itemize}
+\tightlist
+\item
+  Potencia de proceso: volumen de proceso que puede asumir el equipo,
+  por ejemplo la cantidad de RAM y el procesador más reciente que
+  tendría un equipo físico. Con la informática de nube, puede añadir o
+  quitar potencia según los procesos que realice ahorrando costos (paga
+  los recursos que usa).
+\item
+  Almacenamiento: volumen de datos que puede guardar el equipo, por
+  ejemplo un equipo tradicional tiene una cantidad de espacio limitado
+  que puede agotarse con el tiempo. Con la información en la nube, puede
+  solicitar más almacenamiento según las necesidades y los proveedores
+  se encargan del mantenimiento del equipo (copias de seguridad, sistema
+  operativo actualizado, correcto funcionamiento, etc.).
+\end{itemize}
+
+\hypertarget{descripciuxf3n-del-modelo-de-responsabilidad-compartida}{%
+\subsection{\texorpdfstring{\emph{Descripción del modelo de
+responsabilidad
+compartida}}{Descripción del modelo de responsabilidad compartida}}\label{descripciuxf3n-del-modelo-de-responsabilidad-compartida}}
+
+Con el modelo de responsabilidad compartida, se separan las
+responsabilidades entre el proveedor de servicios y el consumidor. La
+seguridad física, alimentación, refrigeración y conectividad de red son
+responsabilidad del proveedor (el consumidor no tiene acceso al centro
+de datos). El consumidor es el responsable de los datos e información
+almacenados en la nube y de la seguridad de acceso. Si usa una base de
+datos SQL en la nube, el proveedor de servicios será el responsable de
+mantener la base de datos real. Pero sigue siendo responsabilidad del
+consumidor que los datos se ingieran en la base de datos. Si implementa
+una máquina virtual con una base de datos SQL en ella, será el
+responsable de las revisiones y actualizaciones de la base de datos,
+mantenimiento de los datos e información almacenadas en ella. Con un
+centro de datos local será el responsable de todo. El modelo de
+responsabilidad compartida está vinculado a los tipos de servicio en la
+nube: infraestructura como servicio (IaaS), plataforma como servicio
+(PaaS) y software como servicio (SaaS). Se procede a desarrollar los
+campos de estos servicios:
+
+\begin{itemize}
+\tightlist
+\item
+  Iaas: mayor responsabilidad en el consumidor mientras que el proveedor
+  es responsable de los conceptos básicos de seguridad física, energía y
+  conectividad.
+\item
+  Saas: mayor responsabilidad en el proveedor.
+\item
+  PaaS: se encuentra entre IaaS y SaaS, distribuyendo uniformemente la
+  responsabilidad entre proveedor y consumidor.
+\end{itemize}
+
+En el siguiente diagrama se resaltan las responsabilidades de cada parte
+en función del tipo de servicio en la nube:
+
+\includegraphics[width=0.9\linewidth,]{Gráfico IaaS, SaaS, PaaS}
+
+Responsabilidades del consumidor:
+
+\begin{itemize}
+\tightlist
+\item
+  Información y datos almacenados en la nube.
+\item
+  Dispositivos que se pueden conectar a la nube(teléfonos móviles,
+  equipos, etc.).
+\item
+  Cuentas e identidades de las personas, servicios y dispositivos de la
+  organización.
+\end{itemize}
+
+Responsabilidades del proveedor de nube:
+
+\begin{itemize}
+\tightlist
+\item
+  Centro de datos físicos.
+\item
+  Red física.
+\item
+  Hosts físicos.
+\end{itemize}
+
+El modelo de servicio definirá la responsabilidad de cosas como:
+
+\begin{itemize}
+\tightlist
+\item
+  Sistemas operativos.
+\item
+  Controles de red.
+\item
+  Aplicaciones.
+\item
+  Identidad e infraestructura.
+\end{itemize}
+
+%
+% ---- Bibliography ----
+
+
+
+\end{document}
